@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 </head>
-<body class="bg-amber-100">
+<body class="">
     @vite(['resources/js/auth/login.js'])
     <div class="min-h-screen flex items-center justify-center p-2 md:p-8">
         <div class="p-6 rounded-3xl w-full max-w-sm bg-white">

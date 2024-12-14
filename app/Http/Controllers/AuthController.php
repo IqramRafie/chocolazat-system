@@ -9,9 +9,6 @@ class AuthController extends Controller
 {
     public function showLoginForm()
     {
-        if (Auth::check())
-            return redirect()->route('home');
-
         return view('auth.login');
     }
 
@@ -20,7 +17,7 @@ class AuthController extends Controller
         $credentials = $request->only(['username', 'password']);
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home')->with('success', 'Logged in successfully!');
+            return redirect()->route('dashboard')->with('success', 'Logged in successfully!');
         }
 
         return back()->withErrors(['email' => 'Invalid credentials.'])->withInput();

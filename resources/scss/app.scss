@@ -1,0 +1,32 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;
+
+body {
+    //@apply bg-amber-50;
+    background: $blue-100;
+}
+
+.header-container {
+    //@apply w-screen bg-white mb-9 flex items-center justify-between pt-2 pb-2 pl-8 pr-8;
+    width: 100vw;
+    background: white;
+    margin-bottom: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+.active-nav {
+    //@apply text-blue-500;
+    color: $blue-600;
+}
+
+.inactive-nav {
+    //@apply text-gray-500;
+    color: $gray-500;
+}

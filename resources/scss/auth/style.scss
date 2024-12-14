@@ -1,0 +1,105 @@
+@import '../app.scss';
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+// below is for md:p-8
+@media (min-width: 768px) {
+    .md\:p-8 {
+        padding: 2rem;
+    }
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.rounded-3xl {
+    border-radius: 1.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.max-w-sm {
+    max-width: 24rem;
+}
+
+.bg-white {
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.block {
+    display: block;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.border {
+    border-width: 1px;
+}
+
+.text-red-500 {
+    color: $red-500;
+}
+
+.bg-blue-500 {
+    background: $blue-500;
+}
+
+.text-white {
+    color: white;
+}
+
+// below is for hover:bg-blue-600
+.hover\:bg-blue-600:hover {
+    background: $blue-600;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}

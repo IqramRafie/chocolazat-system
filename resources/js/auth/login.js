@@ -1,1 +1,1 @@
-import '../../css/auth/style.css';
+import '../../scss/auth/style.scss';
