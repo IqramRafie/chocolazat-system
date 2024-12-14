@@ -11,6 +11,11 @@
 <body>
 @include('layout.header')
 
-@yield('content')
+<div class="container-fluid">
+    <div class="container bg-white rounded-5 p-5">
+        @yield('content')
+    </div>
+</div>
+
 </body>
 </html>
