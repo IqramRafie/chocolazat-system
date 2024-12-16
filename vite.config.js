@@ -14,7 +14,8 @@ export default defineConfig({
                 'resources/scss/app.scss',
                 'resources/js/app.js',
                 'resources/js/auth/login.js',
-                'resources/js/layouts/header.js'
+                'resources/js/layouts/header.js',
+                'resources/js/modules/nav.js'
             ],
             refresh: true,
         }),
