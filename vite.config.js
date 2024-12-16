@@ -10,7 +10,12 @@ export default defineConfig({
     },
     plugins: [
         laravel({
-            input: ['resources/scss/app.scss', 'resources/js/app.js', 'resources/js/auth/login.js'],
+            input: [
+                'resources/scss/app.scss',
+                'resources/js/app.js',
+                'resources/js/auth/login.js',
+                'resources/js/layouts/header.js'
+            ],
             refresh: true,
         }),
     ],
