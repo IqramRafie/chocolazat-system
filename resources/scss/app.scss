@@ -23,10 +23,114 @@ body {
 
 .active-nav {
     //@apply text-blue-500;
-    color: $blue-600;
+    color: $blue-700;
 }
 
 .inactive-nav {
     //@apply text-gray-500;
-    color: $gray-500;
+    color: $blue-400;
 }
+
+.inactive-nav:hover {
+    //@apply text-blue-500;
+    color: $blue-600;
+}
+
+.inmodule-nav {
+    //background: $purple-100;
+    background: white;
+    padding: 2rem 1rem;
+    width: 250px;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    justify-content: start;
+    align-items: start;
+}
+
+.inmodule-nav-item {
+    //@apply text-gray-500;
+    color: $indigo-400;
+    font-size: 1.125rem;
+}
+
+.inmodule-nav-item:hover {
+    //@apply text-gray-700;
+    color: $pink-500;
+    background: $blue-100;
+}
+
+.inmodule-nav-item-active {
+    //@apply text-gray-500;
+    color: $pink-500;
+    background: $blue-100;
+}
+
+.inmodule-nav-item-active:hover {
+    //@apply text-gray-500;
+    color: $pink-700;
+    background: $blue-200;
+}
+
+.brand:hover {
+    background: $gray-200;
+}
+
+.module-title {
+    color: $blue-300;
+}
+
+.input-pack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.input-pack > label {
+    flex: 0 0 13rem;
+    color: $gray-800;
+}
+
+.input-pack > input,
+.input-pack > textarea{
+    flex: 1;
+}
+
+.form-naz {
+    padding-right: 15rem;
+}
+
+.form-section {
+    color: $gray-600;
+}
+
+.table-naz {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-naz td,
+.table-naz th {
+    padding: 0.75rem 2rem;
+}
+
+.table-naz th {
+    background: $gray-200;
+    color: $gray-700;
+    font-weight: 600;
+
+    font-size: 1.125rem;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.input-pack > textarea {
+    height: 8rem;
+}
+
+
