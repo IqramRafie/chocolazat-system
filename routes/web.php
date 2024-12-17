@@ -23,6 +23,8 @@ Route::middleware(['auth.check'])->group(function() {
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
     Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
 
+    Route::get('/orders/{order}/delete', [OrderController::class, 'destroy'])->name('orders.delete');
+
     Route::get('/hr', [HrController::class, 'index'])->name('hr');
 
     Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory');
