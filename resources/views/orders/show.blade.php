@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <td>
-                    {{ $order->ordered_products[0]['product_id'] }}
+                    {{ ucwords($order->ordered_products[0]['product_id']) }}
                 </td>
                 <td>
                     {{ $order->ordered_products[0]['quantity'] }}
@@ -47,7 +47,7 @@
         </table>
 
         <div class="d-flex gap-4">
-            <a href="#" class="btn btn-secondary">Edit</a>
+            <a href="{{ route('orders.edit', ['order' => $order]) }}" class="btn btn-secondary">Edit</a>
         </div>
 
     </div>

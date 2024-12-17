@@ -10,6 +10,19 @@ class OrderController extends Controller
 {
     public function index()
     {
+        // see in the get query if there contain a search parameter
+        if (request()->has('search')) {
+            // if the search only contain numbers, search by id
+            if (is_numeric(request('search'))) {
+                return view('orders.index', [
+                    'orders' => Order::where('id', request('search'))->get(),
+                ]);
+            }
+
+            return view('orders.index', [
+                'orders' => Order::where('customer_name', 'like', '%' . request('search') . '%')->get(),
+            ]);
+        }
         return view('orders.index', [
             'orders' => Order::orderBy('id', 'desc')->get(),
         ]);
@@ -49,5 +62,10 @@ class OrderController extends Controller
         ]);
     }
 
-
+    public function edit(Order $order)
+    {
+        return view('orders.edit', [
+            'order' => $order,
+        ]);
+    }
 }
