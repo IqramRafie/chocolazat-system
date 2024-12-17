@@ -27,7 +27,7 @@
                 <td>{{ $order->order_date }}</td>
                 <td>
                     <a href="{{ route('orders.show', $order) }}" class="btn btn-outline-secondary">View</a>
-                    <a href="{{ route('orders.delete', $order->id) }}" onclick="return confirm('Are you sure')" class="btn btn-outline-danger">Delete</a>
+                    <a href="{{ route('orders.delete', $order->id) }}" onclick="return confirm('Are you sure?')" class="btn btn-outline-danger">Delete</a>
                 </td>
             </tr>
         @endforeach
