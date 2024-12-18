@@ -9,7 +9,7 @@
 
     <form class="d-flex mb-4 align-items-baseline gap" method="get" action="{{ route('orders') }}">
         <label for="search_field" class="form-label me-5">Search:</label>
-        <input type="text" id="search_field" class="form-control w-auto me-2">
+        <input type="text" id="search_field" class="form-control w-auto me-2" name="search_field">
         <button class="btn btn-primary" type="submit">Search</button>
     </form>
 
