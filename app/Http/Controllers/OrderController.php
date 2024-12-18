@@ -76,4 +76,24 @@ class OrderController extends Controller
 
         return redirect()->route('orders');
     }
+
+    public function update(Request $request, Order $order)
+    {
+        $order->customer_name = $request->customer_name;
+        $order->order_date = $request->order_date;
+        $order->delivery_address = $request->delivery_address;
+
+        $new_ordered_products = [
+            [
+                'product_id' => $request->product_id[0],
+                'quantity' => $request->quantity[0],
+            ]
+        ];
+
+        $order->ordered_products = $new_ordered_products;
+
+        $order->save();
+
+        return redirect()->route('orders');
+    }
 }

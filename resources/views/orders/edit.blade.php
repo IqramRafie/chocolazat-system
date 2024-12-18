@@ -6,9 +6,9 @@
 
 @section('module-content-2')
     <h4 class="module-title mb-4 fs-5">Edit Order - {{ $order->id }}</h4>
-    <form action="{{ '' }}" method="post" class="form-naz">
+    <form action="{{ route('orders.update', $order) }}" method="post" class="form-naz">
         @csrf
-
+        @method('PUT')
         <div class="input-pack mb-4">
             <label for="customer_name" class="form-label">Customer Name:</label>
             <input type="text" name="customer_name" class="form-control"

@@ -22,8 +22,8 @@ Route::middleware(['auth.check'])->group(function() {
     Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
     Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
     Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
-
     Route::get('/orders/{order}/delete', [OrderController::class, 'destroy'])->name('orders.delete');
+    Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
 
     Route::get('/hr', [HrController::class, 'index'])->name('hr');
 
