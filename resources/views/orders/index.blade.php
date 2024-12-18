@@ -9,8 +9,12 @@
 
     <form class="d-flex mb-4 align-items-baseline gap" method="get" action="{{ route('orders') }}">
         <label for="search_field" class="form-label me-5">Search:</label>
-        <input type="text" id="search_field" class="form-control w-auto me-2" name="search_field">
+        <input type="text" id="search_field" class="form-control w-auto me-2" name="search_field"
+               value="{{ request('search_field') }}">
         <button class="btn btn-primary" type="submit">Search</button>
+        @if(!empty(request('search_field')))
+            <a href="{{ route('orders') }}" class="btn btn-outline-secondary ms-2">Clear</a>
+        @endif
     </form>
 
     <table class="table-naz">
