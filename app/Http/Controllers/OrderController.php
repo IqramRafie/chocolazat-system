@@ -68,4 +68,12 @@ class OrderController extends Controller
             'order' => $order,
         ]);
     }
+
+
+    public function destroy(Order $order)
+    {
+        $order = Order::where('id', $order->id)->firstorfail()->delete();
+
+        return redirect()->route('orders');
+    }
 }
