@@ -28,9 +28,6 @@
                 <td>
                     <div class="d-flex gap-3">
                         <a href="{{ route('orders.show', $order) }}" class="btn btn-outline-secondary">View</a>
-                        <a href="{{ route('orders.delete', $order->id) }}"
-                           onclick="return confirm('Are you sure?')"
-                           class="btn btn-outline-danger">Delete</a>
                     </div>
                 </td>
             </tr>

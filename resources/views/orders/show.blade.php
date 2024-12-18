@@ -48,6 +48,15 @@
 
         <div class="d-flex gap-4">
             <a href="{{ route('orders.edit', ['order' => $order]) }}" class="btn btn-secondary">Edit</a>
+            <div>
+                <form action="{{ route('orders.destroy', $order) }}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button onclick="return confirm('Are you sure?')"
+                       class="btn btn-outline-danger">Delete</button>
+                </form>
+            </div>
+
         </div>
 
     </div>
