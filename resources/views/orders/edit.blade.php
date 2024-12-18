@@ -1,11 +1,11 @@
 @extends('orders.layout')
 
 @section('module-section-title-2')
-    Create Order
+    Edit Order - {{ $order->id }}
 @endsection
 
 @section('module-content-2')
-    <h4 class="module-title mb-4 fs-5">Create Order</h4>
+    <h4 class="module-title mb-4 fs-5">Edit Order - {{ $order->id }}</h4>
     <form action="{{ '' }}" method="post" class="form-naz">
         @csrf
 
