@@ -11,16 +11,16 @@ class OrderController extends Controller
     public function index()
     {
         // see in the get query if there contain a search parameter
-        if (request()->has('search')) {
+        if (request()->has('search_field')) {
             // if the search only contain numbers, search by id
-            if (is_numeric(request('search'))) {
+            if (is_numeric(request('search_field'))) {
                 return view('orders.index', [
-                    'orders' => Order::where('id', request('search'))->get(),
+                    'orders' => Order::where('id', request('search_field'))->get(),
                 ]);
             }
 
             return view('orders.index', [
-                'orders' => Order::where('customer_name', 'like', '%' . request('search') . '%')->get(),
+                'orders' => Order::where('customer_name', 'like', '%' . request('search_field') . '%')->get(),
             ]);
         }
         return view('orders.index', [
